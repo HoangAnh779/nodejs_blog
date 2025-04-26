@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
+    
     "start": "node --watch src/index.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,10 +23,23 @@
     "url": "https://github.com/HoangAnh779/nodejs_blog/issues"
   },
   "homepage": "https://github.com/HoangAnh779/nodejs_blog#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": 
+      "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "description": "",
   "dependencies": {
     "express": "^4.21.0",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
+    "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
