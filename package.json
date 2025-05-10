@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    
     "start": "node --watch src/index.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,8 +23,7 @@
   },
   "homepage": "https://github.com/HoangAnh779/nodejs_blog#readme",
   "lint-staged": {
-    "src/**/*.{js,json,scss}": 
-      "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
   "husky": {
     "hooks": {
@@ -38,8 +36,12 @@
     "express-handlebars": "^8.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.14.1",
+    "mongoose-slug-generator": "^1.0.4",
     "prettier": "^3.5.3",
-    "save-dev": "^0.0.1-security"
+    "save-dev": "^0.0.1-security",
+    "slugify": "^1.6.6"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
